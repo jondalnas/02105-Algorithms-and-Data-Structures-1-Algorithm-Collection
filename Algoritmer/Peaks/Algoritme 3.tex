@@ -1,0 +1,13 @@
+Hvis et element har en nabo der er højere end den selv, så må der være en peak i retningen af den nabo\\
+\textbf{Pseudokode:}
+\begin{lstlisting}[frame=single, mathescape=true]
+Peak3(A, i, j)
+	m = $\lfloor$(i+j)/2$\rfloor$
+
+	if A[m-1] $\leq$ A[m] $\geq$ A[m+1] return n
+	elseif A[m-1] > A[m]
+		return Peak(A, i, m-1)
+	elseif A[m] < A[m+1]
+		return Peak3(A, m+1, j)
+\end{lstlisting}
+\textbf{Running time:} O(log n)

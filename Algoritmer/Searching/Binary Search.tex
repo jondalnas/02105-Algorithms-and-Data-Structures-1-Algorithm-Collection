@@ -1,0 +1,13 @@
+Hvis det midterste element i et udsnit af A er lavere end x, så må x være i højre halvdel, ellers, hvis det midterste element er højere end x, så må x være i venstre halvdel\\
+\textbf{Pseudokode:}
+\begin{lstlisting}[frame=single, mathescape=true]
+BinarySearch(A, i, j, x)
+	if j < i return false
+
+	m = $\lfloor$(i+j)/2$\rfloor$
+
+	if A[m] = x return true
+	else if A[m] < x return BinarySearch(A, m+1, j, x)
+	else return BinarySearch(A, i, m-1, x)
+\end{lstlisting}
+\textbf{Running time:} O(log n)

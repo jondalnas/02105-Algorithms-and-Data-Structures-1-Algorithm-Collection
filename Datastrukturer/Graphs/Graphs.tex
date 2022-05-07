@@ -1,0 +1,26 @@
+\textbf{Termenologier}:
+\begin{itemize}
+	\item Undirected graf: G=(V,E), hvor V er hjørner, E er kanter. n er antallet af hjørner, m er antallet af kanter
+	\item Path: En sekvens af hjørner forbundet af kanter
+	\item Cycle: En path, der starter og slutter i samme kant
+	\item Degree: deg(v) er antallet af kanter forbundet til v
+	\item Connectivity: To kanter et forbundet hvis der eksistere en path mellem dem
+\end{itemize}
+\textbf{Lemmaer}:
+\begin{itemize}
+	\item $\sum_{v\in V}$dev(v)=2m
+\end{itemize}
+\textbf{Operationer}:
+\begin{itemize}
+	\item \texttt{ADJACENT(v, u)}: Find ud af om v og u er naboer
+	\item \texttt{NEIGHBORS(v)}: Returner alle naboer af v
+	\item \texttt{INSERT(v, u)}: Tilføj (v, u) til G, med mindre den allerede er der
+\end{itemize}
+\textbf{Shortest Path}: En Shortest Path er en path, der går forbi færest mulige kanter
+
+\subsubsection{Adjacency Matrix}
+\input{Datastrukturer/Graphs/Adjacency Matrix.tex}
+\newpage
+
+\subsubsection{Adjacency List}
+\input{Datastrukturer/Graphs/Adjacency List.tex}

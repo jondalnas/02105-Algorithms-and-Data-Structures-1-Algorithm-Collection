@@ -1,0 +1,11 @@
+Split A ind i to halvdele, sorter disse to rekursivt, sammensæt de to undersæt (divide and conquer)\\
+\textbf{Pseudokode:}
+\begin{lstlisting}[frame=single, mathescape=true]
+MergeSort(A, i, j)
+	if i < j
+		m = $\lfloor$(i+j)/2$\rfloor$
+		MergeSort(A, i, m)
+		MergeSort(A, m+1, j)
+		Merge(A, i, m, j)
+\end{lstlisting}
+\textbf{Running time:} O(n log n)

@@ -1,0 +1,24 @@
+Lad hvert set være et træ. Hvert træ representeres ved hver knudes parent knude, hvor en rod er p[rod] = rod\\
+\textbf{Pseudokode}:
+\begin{lstlisting}[frame=single, mathescape=true]
+Init(n)
+	for k = 0 to n - 1
+		p[k] = k
+
+Find(i)
+	while i$\neq$p[i]
+		i = p[i]
+	return i
+
+Union(i, j)
+	ri = Find(i)
+	rj = Find(j)
+	if ri$\neq$rj
+		p[ri] = rj
+\end{lstlisting}
+\textbf{Running Time}:
+\begin{itemize}
+	\item \texttt{INIT(n)}: O(n)
+	\item \texttt{UNION(n)}: O(d)
+	\item \texttt{FIND(n)}: O(d)
+\end{itemize}

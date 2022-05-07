@@ -1,0 +1,44 @@
+Med en hashfunktion h(x), der ligeligt distibuere keys over m, lav en statisk liste A af størrelsen m. Hvert element x gemmes nu i A[h(x.key)] eller i klosteret til højre for\\
+\textbf{Termenologier}:
+\begin{itemize}
+	\item Cluster: Et kloster er en sekvens af data uden tomme elementer
+\end{itemize}
+\textbf{Pseudokode}:
+\begin{lstlisting}[frame=single, mathescape=true]
+Search(k)
+	n = h(k)
+	while A[n] is not empty
+		if A[n].key = k
+			return A[n]
+		
+		n++
+	return null
+
+Insert(x)
+	n = h(x.key)
+	while A[n] is not empty
+		n++
+	
+	A[n] = x
+
+Delete(x)
+	n = h(x.key)
+	while A[n] is not empty
+		if A[n].key = k
+			A[n] = null
+			break
+		
+		n++
+
+	n++
+	while A[n] is not empty
+		A[n-1] = A[n]
+	A[n-1] = null
+\end{lstlisting}
+\textbf{Running Time}:
+\begin{itemize}
+	\item \texttt{SEARCH(k)}: O(1), expected time
+	\item \texttt{INSERT(k)}: O(1), expected time
+	\item \texttt{DELETE(k)}: O(1), expected time
+\end{itemize}
+\textbf{Plads}: O(n)

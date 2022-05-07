@@ -1,0 +1,18 @@
+Hvis vi bruger en Union Find, hvor hver knude i den dynamisk forbundede graf er en knude i Union Find grafen\\
+\textbf{Pseudokode}:
+\begin{lstlisting}[frame=single, mathescape=true]
+Init(n)
+	U.Init(n)
+
+Connected(u, v)
+	return U.Find(u) = U.Find(v)
+
+Insert(u, v)
+	U.Union(u, v)
+\end{lstlisting}
+\textbf{Running Time}:
+\begin{itemize}
+	\item \texttt{INIT(n)}: O(n)
+	\item \texttt{CONNECTED(u, v)}: O(log n)
+	\item \texttt{INSERT(u, v)}: O(log n) 
+\end{itemize}

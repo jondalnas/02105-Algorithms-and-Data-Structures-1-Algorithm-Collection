@@ -1,0 +1,29 @@
+Vi kan bruge en heap til at lave en priority queue\\
+\begin{lstlisting}[frame=single, mathescape=true]
+Max()
+	return H[0]
+
+ExtractMax()
+	r = H[1]
+	H[1] = H[n]
+	n = n - 1
+	H.BubbleDown(1)
+	return r
+
+IncreaseKey(x, k)
+	n = n + 1
+	H[n] = x
+	H.BubbleUp(n)
+
+Insert(x)
+	H[x] = k
+	BubbleUp(x)
+\end{lstlisting}
+\textbf{Running time}:
+\begin{itemize}
+	\item \texttt{MAX()}: O(1)
+	\item \texttt{EXSTRACTMAX()}: O(log n)
+	\item \texttt{INCREASEKEY(x, k)}: O(log n)
+	\item \texttt{INSERT(x)}: O(log n)
+\end{itemize}
+\textbf{Plads}: O(n)

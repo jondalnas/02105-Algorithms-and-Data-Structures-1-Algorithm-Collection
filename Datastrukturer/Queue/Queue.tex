@@ -1,0 +1,29 @@
+En dynamisk sekvens af elementer Q\\
+\textbf{Operationer:}
+\begin{itemize}
+	\item \texttt{ENQUEUE(x)}: Tilføj x til Q
+	\item \texttt{DEQUEUE(x)}: Fjern og returner det første tilføjede element til Q
+	\item \texttt{ISEMPTY()}: Returnere sand hvis Q er tom
+\end{itemize}
+\textbf{Pseudokode:}
+\begin{lstlisting}[frame=single, mathescape=true]
+Enqueue(Q, x, tail)
+	Q[tail] = x
+	tail = tail + 1
+
+Pop(S, head)
+	elm = Q[head]
+	head = head - 1
+	return elm
+
+IsEmpty(head, tail)
+	if head = tail return true
+	else return false
+\end{lstlisting}
+\textbf{Running time}:
+\begin{itemize}
+	\item \texttt{ENQUEUE(x)}: O(1)
+	\item \texttt{DEQUEUE(x)}: O(1)
+	\item \texttt{ISEMPTY()}: O(1)
+\end{itemize}
+\textbf{Plads}: $\Theta$(N)

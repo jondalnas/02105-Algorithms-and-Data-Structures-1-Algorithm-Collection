@@ -1,0 +1,30 @@
+Lad hvert set være et træ. Hvert træ representeres ved hver knudes parent knude, hvor en rod er p[rod] = rod. Lav også en list sz[0..n-1], hvor sz[i] er størrelsen af undertræet der har i som rod\\
+\textbf{Pseudokode}:
+\begin{lstlisting}[frame=single, mathescape=true]
+Init(n)
+	for k = 0 to n - 1
+		p[k] = k
+		sz[k] = 1
+
+Find(i)
+	while i$\neq$p[i]
+		i = p[i]
+	return i
+
+Union(i, j)
+	ri = Find(i)
+	rj = Find(j)
+	if ri$\neq$rj
+		if sz[ri] < sz[rj]
+			p[ri] = rj
+			sz[rj] = sz[ri] + sz[rj]
+		else
+			p[rj] = ri
+			sz[ri] = sz[ri] + sz[rj]
+\end{lstlisting}
+\textbf{Running Time}:
+\begin{itemize}
+	\item \texttt{INIT(n)}: O(n)
+	\item \texttt{UNION(n)}: O(log n)
+	\item \texttt{FIND(n)}: O(log n)
+\end{itemize}

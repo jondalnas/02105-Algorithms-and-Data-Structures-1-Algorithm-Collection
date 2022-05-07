@@ -1,0 +1,23 @@
+Lad S være en Sorted Doubly Linked List\\
+\textbf{Pseudokode}:
+\begin{lstlisting}[frame=single, mathescape=true]
+Predecessor(k)
+	return BinarySearch(S, k)
+
+Successor(k)
+	return BinarySearch(S, k)
+
+Insert(x)
+	S.Insert(x)
+
+Delete(x)
+	S.Delete(x)
+\end{lstlisting}
+\textbf{Running Time}:
+\begin{itemize}
+	\item \texttt{Predecessor(k)}: O(log n)
+	\item \texttt{Successor(k)}: O(log n)
+	\item \texttt{Insert(x)}: O(n)
+	\item \texttt{Delete(x)}: O(n)
+\end{itemize}
+\textbf{Space}: O(n)

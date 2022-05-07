@@ -1,0 +1,37 @@
+Flere knuder, med data kaldt keys, der forbindes ved pointere til hinanden. Kan både være enkelt eller dobblet linked\\
+\textbf{Operationer:}
+\begin{itemize}
+	\item \texttt{SEARCH(head, x)}: Returner knude med key x
+	\item \texttt{INSERT(x)}: Indsæt knude x foran i listen. Returner nye hoved
+	\item \texttt{DELETE()}: Slet knude x i listen. Returner nye hoved
+\end{itemize}
+\textbf{Pseudokode:}
+\begin{lstlisting}[frame=single, mathescape=true]
+Search(head, key)
+	x = head
+	while x not null
+		if x.key = key return x
+		x = x.next
+	return null
+
+Insert(head, x)
+	x.prev = null
+	x.next = head
+	head.prev = x
+	return x
+
+Delete(head, x)
+	if x.prev $\neq$ null
+		x.prev.next = x.next
+	else head = x.next
+	if x.next $\neq$ null
+		x.next.prev = x.prev
+	return head
+\end{lstlisting}
+\textbf{Running time}:
+\begin{itemize}
+	\item \texttt{SEARCH(head, x)}: O(n)
+	\item \texttt{INSERT(x)}: O(1)
+	\item \texttt{DELETE()}: O(1)
+\end{itemize}
+\textbf{Plads}: $\Theta$(N)

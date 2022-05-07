@@ -1,0 +1,25 @@
+Lav en list id[0..n-1] hvor id[i] er representanten for i\\
+\textbf{Pseudokode}:
+\begin{lstlisting}[frame=single, mathescape=true]
+Init(n)
+	for k = 0 to n - 1
+		id[k] = k
+
+Find(i)
+	return id[i]
+
+Union(i, j)
+	iID = Find(i)
+	jID = Find(j)
+
+	if iID$\neq$jID
+		for k = 0 to n - 1
+			if id[k] = iId
+				id[k] = jID
+\end{lstlisting}
+\textbf{Running Time}:
+\begin{itemize}
+	\item \texttt{INIT(n)}: O(n)
+	\item \texttt{UNION(n)}: O(n)
+	\item \texttt{FIND(n)}: O(1)
+\end{itemize}

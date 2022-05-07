@@ -1,0 +1,56 @@
+Et Binary Search Tree er et træ, som opfylder at for en given knude v, har en venstre og højre knude, hvis key er hhv. mindre end og størrer end v\\
+\textbf{Pseudokode}:
+\begin{lstlisting}[frame=single, mathescape=true]
+Predecessor(v, k)
+	if v = null
+		return null
+	if v.key = k
+		return v
+	if k < v.key
+		return Predecessor(v.left, k)
+	t = Predecessor(v.right, k)
+	if t $\neq$ null
+		return t
+	else
+		return v
+
+Successor(k)
+	if v = null
+		return null
+	if v.key = k
+		return v
+	if k > v.key
+		return Successor(v.right, k)
+	t = Successor(v.left, k)
+	if t $\neq$ null
+		return t
+	else
+		return v
+
+Insert(x, v)
+	if v = null return x
+	if x.key $\leq$ v.key
+		v.left = Insert(x, v.left)
+	if x.key > v.key
+		v.right = Insert(x, v.right)
+
+Delete(x)
+	if x.left = null and x.right = null
+		x.parent.Child(x) = null
+	else if x.left = null and x.right not null
+		x.parent.Child(x) = x.right
+	else if x.right = null and x.left not null
+		x.parent.Child(x) = x.left
+	else
+		x.key = Successor(x.right).key
+		Delete(Successor(x.right))
+\end{lstlisting}
+\newpage
+\noindent\textbf{Running Time}:
+\begin{itemize}
+	\item \texttt{Predecessor(k)}: O(h)
+	\item \texttt{Successor(k)}: O(h)
+	\item \texttt{Insert(x)}: O(h)
+	\item \texttt{Delete(x)}: O(h)
+\end{itemize}
+\textbf{Space}: O(n)

@@ -1,0 +1,31 @@
+Lad S være en Doubly Linked List\\
+\textbf{Pseudokode}:
+\begin{lstlisting}[frame=single, mathescape=true]
+Predecessor(k)
+	large = null
+	for all elements in S n
+		if n.key $\leq$ k and n.key > large.key
+			large = n
+	return large
+
+Successor(k)
+	small = null
+	for all elements in S n
+		if n.key $\geq$ k and n.key < large.key
+			small = n
+	return small
+
+Insert(x)
+	S.Insert(x)
+
+Delete(x)
+	S.Delete(x)
+\end{lstlisting}
+\textbf{Running Time}:
+\begin{itemize}
+	\item \texttt{Predecessor(k)}: O(n)
+	\item \texttt{Successor(k)}: O(n)
+	\item \texttt{Insert(x)}: O(1)
+	\item \texttt{Delete(x)}: O(1)
+\end{itemize}
+\textbf{Space}: O(n)

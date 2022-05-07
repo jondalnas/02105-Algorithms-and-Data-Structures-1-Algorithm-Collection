@@ -1,0 +1,13 @@
+Kompremer en Weighter Quick Union og Quick Union på Find, lav alle knuder på vejen til roden, child til roden\\
+\textbf{Pseudokode}:
+\begin{lstlisting}[frame=single, mathescape=true]
+Find(i)
+	oi = i
+	while i$\neq$p[i]
+		i = p[i]
+
+	while oi$\neq$p[oi]
+		p[oi] = i
+	return i
+\end{lstlisting}
+\textbf{Running Time}: O(n + m $\alpha$(m, n))

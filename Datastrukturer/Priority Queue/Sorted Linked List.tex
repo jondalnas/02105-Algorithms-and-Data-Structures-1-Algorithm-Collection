@@ -1,0 +1,27 @@
+Lav en sorteret dobbelt linked list S\\
+\textbf{Pseudokode:}
+\begin{lstlisting}[frame=single, mathescape=true]
+Max(S)
+	return S[0]
+
+ExtractMax(S)
+	max = S[0]
+	S.Delete(max)
+	return s
+
+IncreaseKey(S, x, k)
+	x.key = k
+	move x linearly to correct new position
+
+Insert(S, x)
+	S.Insert(x)
+	move x linearly to correct new position
+\end{lstlisting}
+\textbf{Running time}:
+\begin{itemize}
+	\item \texttt{MAX()}: O(1)
+	\item \texttt{EXSTRACTMAX()}: O(1)
+	\item \texttt{INCREASEKEY(x, k)}: O(n)
+	\item \texttt{INSERT(x)}: O(n)
+\end{itemize}
+\textbf{Plads}: O(n)

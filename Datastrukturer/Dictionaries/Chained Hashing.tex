@@ -1,0 +1,24 @@
+Med en hashfunktion h(x), der ligeligt distibuere keys over m, lav en statisk liste A på størrelsen m af linked lister, hvor hvert element har data\\
+\textbf{Pseudokode}:
+\begin{lstlisting}[frame=single, mathescape=true]
+Search(k)
+	n = A[h(k)]
+	while n not null
+		if n.key = k
+			return n
+		n = n.next
+	return null
+
+Insert(x)
+	A[h(x.key)].Insert(x)
+
+Delete(x)
+	A[h(x.key)].Delete(x)
+\end{lstlisting}
+\textbf{Running Time}:
+\begin{itemize}
+	\item \texttt{SEARCH(k)}: O(1), expected time
+	\item \texttt{INSERT(k)}: O(1)
+	\item \texttt{DELETE(k)}: O(1)
+\end{itemize}
+\textbf{Plads}: O(n)

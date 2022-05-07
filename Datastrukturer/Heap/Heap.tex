@@ -1,0 +1,40 @@
+Et næsten komplet binært træ, hvor alle knuder gemmer et element. Heap orden skal være opfyldt, for alle knuder v, skal begge børnenes keys være mindre end v.key\\
+\textbf{Operationer}:
+\begin{itemize}
+	\item \texttt{PARENT(x)}: Returner x's forældre
+	\item \texttt{LEFT(x)}: Returnere x's venstre barn
+	\item \texttt{RIGHT(x)}: Returnere x's højre barn
+	\item \texttt{BUBBLEUP(x)}: Ryk knude x op, hvis den går imod heap orden
+	\item \texttt{BUBBLEDOWN(x)}: Ryk knude x ned, hvis den går imod heap orden
+\end{itemize}
+\textbf{Pseudokode}:
+\begin{lstlisting}[frame=single, mathescape=true]
+BubbleUp(x)
+	if x.Parent().key < x.key
+		swap x.Parent() and x
+		BubbleUp(x.Parent())
+
+BubbleDown(x)
+	if x.Left().key > x.key
+		if x.Right().key > x.key and x.Left().key < x.Right().key
+			swap x.Right() and x
+			BubbleDown(x.Right())
+		else 
+			swap x.Left() and x
+			BubbleDown(x.Left())
+	else if x.Right().key > x.key
+		swap x.Right() and x
+		BubbleDown(x.Right())
+\end{lstlisting}
+\textbf{Running Time}:
+\begin{itemize}
+	\item \texttt{BUBBLEUP(x)}: O(log n)
+	\item \texttt{BUBBLEDOWN(x)}: O(log n)
+\end{itemize}
+\newpage
+
+\subsubsection{Linked List}
+\input{Datastrukturer/Heap/Linked List.tex}
+
+\subsubsection{Array List}
+\input{Datastrukturer/Heap/Array List.tex}

@@ -1,0 +1,14 @@
+Lav en omvendt graf G$^R$. Find en kant v med in-degree 0. Fjern v og alle kanter forbundet ude af den. Placer v til mest til venstre i den nye graf. Rekurser\\
+\textbf{Pseudokode}:
+\begin{lstlisting}[frame=single, mathescape=true]
+TopSort1(G)
+	reverse G
+	while G has verticies left
+		for each vertex in G with in-degree 0 v
+			remove v from G
+		
+		if G does not contian vertex with in-degree 0
+			return false
+	return true
+\end{lstlisting}
+\textbf{Running time}: O(n$^2$)

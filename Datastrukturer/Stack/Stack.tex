@@ -1,0 +1,29 @@
+En dynamisk sekvens af elementer S\\
+\textbf{Operationer:}
+\begin{itemize}
+	\item \texttt{PUSH(x)}: Tilføj x til S
+	\item \texttt{POP(x)}: Fjern og returner det senest tilføjede element til S
+	\item \texttt{ISEMPTY()}: Returnere sand hvis S er tom
+\end{itemize}
+\textbf{Pseudokode:}
+\begin{lstlisting}[frame=single, mathescape=true]
+Push(S, x, top)
+	S[top+1] = x
+	top = top + 1
+
+Pop(S, top)
+	elm = S[top]
+	top = top - 1
+	return elm
+
+IsEmpty(top)
+	if top = -1 return true
+	else return false
+\end{lstlisting}
+\textbf{Running time}:
+\begin{itemize}
+	\item \texttt{PUSH(x)}: O(1)
+	\item \texttt{POP(x)}: O(1)
+	\item \texttt{ISEMPTY()}: O(1)
+\end{itemize}
+\textbf{Plads}: $\Theta$(N)

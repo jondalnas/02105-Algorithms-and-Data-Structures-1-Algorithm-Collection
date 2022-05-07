@@ -1,0 +1,16 @@
+Afmarker alle hjørner og lav en queue Q. Marker start kant og enqueue start kanten s. Imens Q ikke er tom dequeue et element, find dens naboer, marker dem og enqueue dem. BFS finder altid Shortest Paths fra s\\
+\textbf{Pseudokode}:
+\begin{lstlisting}[frame=single, mathescape=true]
+BFS(s)
+	mark s
+	s.d = 0
+	Q.Enqueue(s)
+	while Q.IsEmpty()
+		v = Q.Dequeue()
+		for each unmarked neighbor u
+			mark u
+			u.d = v.d + 1
+			u.parrent = v
+			Q.Enqueue(u)
+\end{lstlisting}
+\textbf{Running time}: O(n + m)

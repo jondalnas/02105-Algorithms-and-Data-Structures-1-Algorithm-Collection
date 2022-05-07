@@ -1,0 +1,22 @@
+Givet en rettet vægtet graf, med positive vægte og et start hjørne s, find den korteste path. Alle hjørner har et distance estimat, v.d, som er længden af den korteste path til det hjørne.\\
+\textbf{Pseudokode}:
+\begin{lstlisting}[frame=single, mathescape=true]
+Dijkstra(G, s)
+	for all vertices v in G
+		v.d = $\infty$
+		v.parent = null
+		P.Insert(v)
+	
+	P.DecreaseKey(v)
+	while P not empty
+		u = ExtractMin(P)
+		for all v that u points to
+			Relax(G, P, u, v)
+
+Relax(G, P, u, v)
+	if (v.d > u.d + G.Adjacent(v, u))
+		v.d = u.d + G.Adjacent(v, u)
+		P.DecreaseKey(v, v.d)
+		v.parent = u
+\end{lstlisting}
+\textbf{Running Time}: O(m log n)

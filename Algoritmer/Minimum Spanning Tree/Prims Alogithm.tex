@@ -1,0 +1,19 @@
+På et givent tidspunkt, tilføj den letteste nabo, af en af de hjørner der allerede er i listen, til listen\\
+\textbf{Pseudokode}:
+\begin{lstlisting}[frame=single, mathescape=true]
+Prim(G, s)
+	for all verticies v in G
+		v.key = $\infty$
+		v.parent = null
+		P.Insert(v)
+	
+	P.DecreaseKey(s, 0)
+	while P is not empty
+		u = P.ExtractMin()
+		for all neightbors v of u
+			if P contains v and G.Adjacent(v, u) < v.key
+				P.DecreaseKey(v, G.Adjacent(v, u))
+				v.key = G.Adjacent(v, u)
+				v.parent = u
+\end{lstlisting}
+\textbf{Running Time}: O(m log n)

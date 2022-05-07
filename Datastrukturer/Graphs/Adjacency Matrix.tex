@@ -1,0 +1,19 @@
+En Adjacency Matrix er en matriks af n$\times$n elementer A, hvor hvert element i listen representere om to hjørner er naboer, med et 1 eller hvis de ikke er, med et 0\\
+\textbf{Pseudokode:}
+\begin{lstlisting}[frame=single, mathescape=true]
+Adjacent(A, v, u)
+	return A[v][u] = 1
+
+Insert(A, v, u)
+	A[v][u] = 1
+
+Neighbors(A, v)
+	return A[v]
+\end{lstlisting}
+\textbf{Running time}:
+\begin{itemize}
+	\item \texttt{ADJACENT(v, u)}: O(1)
+	\item \texttt{INSERT(v, u)}: O(1)
+	\item \texttt{NEIGHBORS(v)}: O(n)
+\end{itemize}
+\textbf{Plads}: $\Theta$(n$^2$)

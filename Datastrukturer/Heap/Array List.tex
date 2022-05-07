@@ -1,0 +1,19 @@
+En list H[0..n], hvor H[0] ikke bliver brugt og H[1..n] er knuderne\\
+\textbf{Pseudokode}:
+\begin{lstlisting}[frame=single, mathescape=true]
+Parent(x)
+	return $\lfloor$x/2$\rfloor$
+
+Left(x)
+	return 2x
+
+Right(x)
+	return 2x+1
+\end{lstlisting}
+\textbf{Running Time}:
+\begin{itemize}
+	\item \texttt{PARENT(x)}: O(1)
+	\item \texttt{LEFT(x)}: O(1)
+	\item \texttt{RIGHT(x)}: O(1)
+\end{itemize}
+\textbf{Plads}: O(n)

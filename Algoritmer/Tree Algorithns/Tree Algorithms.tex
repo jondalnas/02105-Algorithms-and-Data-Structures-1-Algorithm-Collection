@@ -1,0 +1,43 @@
+\subsubsection{Size}
+Check størrelsen af venstre og højre knude og læg dem sammen med 1, det giver størrelsen af en knude\\
+\textbf{Pseudokode}:
+\begin{lstlisting}[frame=single, mathescape=true]
+Size(v)
+	if v = null
+		return 0
+	return size(v.left) + Size(v.right) + 1
+\end{lstlisting}
+\textbf{Running time}: O(size(v))
+
+\subsubsection{Tree Traversals}
+Besøg alle knuder i en bestem rækkefølge.\\
+\textbf{Rækkefølger}:
+\begin{itemize}
+	\item Inorder: Besøg venstre undertræ, besøg knude, besæg højre undertræ
+	\item Preoder: Besøg knude, besøg venstre undertræ, besæg højre undertræ
+	\item Inorder: Besøg venstre undertræ, besæg højre undertræ, besøg knude
+\end{itemize}
+\textbf{Pseudokode}:
+\begin{lstlisting}[frame=single, mathescape=true]
+Inorder(v)
+	if v = null
+		return
+	Inorder(v.left)
+	v.Visit()
+	Inorder(v.right)
+
+Preorder(v)
+	if v = null
+		return
+	v.Visit()
+	Preorder(v.left)
+	Preorder(v.right)
+
+Postorder(v)
+	if v = null
+		return
+	Postorder(v.left)
+	Postorder(v.right)
+	v.Visit()
+\end{lstlisting}
+\textbf{Running time}: O(n)

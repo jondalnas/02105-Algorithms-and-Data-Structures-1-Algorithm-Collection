@@ -1,0 +1,18 @@
+Givet en rettet acyclisk graf, find den korteste vej fra et start hjørne til alle andre hjørner\\
+\textbf{Pseudokode}:
+\begin{lstlisting}[frame=single, mathescape=true]
+Dijkstra(G, s)
+	for all vertices v in G
+		v.d = $\infty$
+		v.parent = null
+	
+	for all vertices u in G topologically sorted
+		for all v that u points to
+			Relax(G, P, u, v)
+
+Relax(G, P, u, v)
+	if (v.d > u.d + G.Adjacent(v, u))
+		v.d = u.d + G.Adjacent(v, u)
+		v.parent = u
+\end{lstlisting}
+\textbf{Running Time}: O(m + n)

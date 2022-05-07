@@ -1,0 +1,19 @@
+En Adjacency List er en statisk liste A, med størrelsen n, af dynamiske lister, af størrelsen deg(v). Hver dynamisk liste indeholder alle naboerne til kanten tilsvarende den statiske listes indeks\\
+\textbf{Pseudokode:}
+\begin{lstlisting}[frame=single, mathescape=true]
+PointsTo(A, v, u)
+	return A[v].Search(u)
+
+Insert(A, v, u)
+	A[v].Insert(u)
+
+Neighbors(A, v)
+	return A[v]
+\end{lstlisting}
+\textbf{Running time}:
+\begin{itemize}
+	\item \texttt{POINTSTO(v, u)}: O(deg(v))
+	\item \texttt{INSERT(v, u)}: O(deg(v))
+	\item \texttt{NEIGHBORS(v)}: O(deg(v))
+\end{itemize}
+\textbf{Plads}: O(n + m)

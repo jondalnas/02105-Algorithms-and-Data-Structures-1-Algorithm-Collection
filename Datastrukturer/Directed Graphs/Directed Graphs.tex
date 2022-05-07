@@ -1,0 +1,26 @@
+Grafer men med kanter der går i en bestemt retning\\
+\textbf{Termenologier}:
+\begin{itemize}
+	\item Path: En sekvens af hjørner forbundet af kanter
+	\item Shortest path: Den path der berøre ferrest hjørner
+	\item Directed acyclic graph: En graf uden cyklusser
+	\item Topological sorting: En rangering af hjørner, hvor alle kanter peger i samme retning
+	\item Strongly connected component: Et undersæt af hjørner, hvor er givent hjørne v har en path til u og u har en path til v
+	\item Transitive closure: En graf har transitive closure, hvis for et givent punkt v, der er en vej direkte til alle andre hjørner den er strongly connected til
+\end{itemize}
+\textbf{Lemmaer}:
+\begin{itemize}
+	\item $\sum_{v\in V}$deg$^-$(v)=$\sum_{v\in V}$deg$^+$(v)=m
+\end{itemize}
+\textbf{Operationer}:
+\begin{itemize}
+	\item \texttt{POINTSTO(v, u)}: Find ud af om v peger på u
+	\item \texttt{NEIGHBORS(v)}: Returner alle hjørner v peger til
+	\item \texttt{INSERT(v, u)}: Tilføj kanten (v, u) til G, med mindre den allerede er der
+\end{itemize}
+
+\subsubsection{Adjacency Matrix}
+\input{Datastrukturer/Directed Graphs/Adjacency Matrix.tex}
+
+\subsubsection{Adjacency List}
+\input{Datastrukturer/Directed Graphs/Adjacency List.tex}

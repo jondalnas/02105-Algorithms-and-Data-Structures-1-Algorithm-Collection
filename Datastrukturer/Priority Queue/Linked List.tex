@@ -1,0 +1,28 @@
+Lav en dobbelt linked list S\\
+\textbf{Pseudokode:}
+\begin{lstlisting}[frame=single, mathescape=true]
+Max(S)
+	for each element in S s
+		if s.key > largest.key
+			largest = s
+	return s
+
+ExtractMax(S)
+	max = Max(S)
+	S.Delete(max)
+	return s
+
+IncreaseKey(x, k)
+	x.key = k
+
+Insert(S, x)
+	S.Insert(x)
+\end{lstlisting}
+\textbf{Running time}:
+\begin{itemize}
+	\item \texttt{MAX()}: O(n)
+	\item \texttt{EXSTRACTMAX()}: O(n)
+	\item \texttt{INCREASEKEY(x, k)}: O(1)
+	\item \texttt{INSERT(x)}: O(1)
+\end{itemize}
+\textbf{Plads}: O(n)

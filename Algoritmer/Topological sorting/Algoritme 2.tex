@@ -1,0 +1,20 @@
+Lav en omvendt graf G$^R$. Lav en liste med in-degree af alle hjørner og en linked list med hjørner med in-degree 0. Fjern det første element fra linked listen og træk en fra alle hjørner v peger på. Check om nogle af de hjørner har in-degree 0 og tilføj dem til linked listen. Rekurser\\
+\textbf{Pseudokode}:
+\begin{lstlisting}[frame=single, mathescape=true]
+TopSort2(G)
+	reverse G
+
+	for each vertex in G v
+		if deg$^-$(v) = 0
+			L.Insert(v)
+		d[v] = deg$^-$(v)
+
+	for each vertex in L v
+		L.Delete(v)
+		for each vertex pointed to by v u
+			d[u]--
+			if d[u] = 0
+				L.Insert(u)
+	return is G empty
+\end{lstlisting}
+\textbf{Running time}: O(n+m)

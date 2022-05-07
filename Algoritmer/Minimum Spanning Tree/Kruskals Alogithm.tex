@@ -1,0 +1,13 @@
+Sorter alle kanter fra letteste til tungeste og tilføj dem til listen, hvis den ikke laver en cycle\\
+\textbf{Pseudokode}:
+\begin{lstlisting}[frame=single, mathescape=true]
+Kurskal(G)
+	sort edges
+	U.Init(n)
+	for all edges (u, v) in G
+		if not U.Connected(u, v)
+			Insert(u, v)
+	
+	return U
+\end{lstlisting}
+\textbf{Running time}: O(m log n)

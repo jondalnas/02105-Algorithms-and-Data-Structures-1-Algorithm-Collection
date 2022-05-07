@@ -1,0 +1,16 @@
+Afmarker alle hjørner, besøg alle naboerne til en kant, som ikke er markeret og marker disse, besøg nu naboerne til dem rekursivt\\
+\textbf{Pseudokode}:
+\begin{lstlisting}[frame=single, mathescape=true]
+DFS(s)
+	time = 0
+	DFS-visit(s)
+
+DFS-visit(v)
+	v.d = time++
+	mark v
+	for each unmarked neighbor u
+		u.parent = v
+		DFS-visit(u)
+	v.f = time++
+\end{lstlisting}
+\textbf{Running time}: O(n + m)
