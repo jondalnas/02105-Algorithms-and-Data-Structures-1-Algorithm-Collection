@@ -4,20 +4,20 @@ Max()
 	return H[0]
 
 ExtractMax()
-	r = H[1]
-	H[1] = H[n]
+	r = H[0]
+	H[0] = H[n]
 	n = n - 1
-	H.BubbleDown(1)
+	H.BubbleDown(0)
 	return r
 
 IncreaseKey(x, k)
-	n = n + 1
-	H[n] = x
-	H.BubbleUp(n)
+	H[x] = k
+	H.BubbleUp(x)
 
 Insert(x)
+	n = n + 1
 	H[x] = k
-	BubbleUp(x)
+	H.BubbleUp(x)
 \end{lstlisting}
 \textbf{Running time}:
 \begin{itemize}
