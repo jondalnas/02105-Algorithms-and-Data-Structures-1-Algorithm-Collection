@@ -24,7 +24,7 @@ Insert(x)
 Delete(x)
 	n = h(x.key)
 	while A[n] is not empty
-		if A[n].key = k
+		if A[n].key = x.key
 			A[n] = null
 			break
 		
@@ -33,6 +33,7 @@ Delete(x)
 	n = n + 1
 	while A[n] is not empty
 		A[n-1] = A[n]
+		n = n + 1
 	A[n-1] = null
 \end{lstlisting}
 \textbf{Running Time}:
