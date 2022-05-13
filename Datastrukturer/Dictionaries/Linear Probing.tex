@@ -11,13 +11,13 @@ Search(k)
 		if A[n].key = k
 			return A[n]
 		
-		n++
+		n = n + 1
 	return null
 
 Insert(x)
 	n = h(x.key)
 	while A[n] is not empty
-		n++
+		n = n + 1
 	
 	A[n] = x
 
@@ -28,9 +28,9 @@ Delete(x)
 			A[n] = null
 			break
 		
-		n++
+		n = n + 1
 
-	n++
+	n = n + 1
 	while A[n] is not empty
 		A[n-1] = A[n]
 	A[n-1] = null
