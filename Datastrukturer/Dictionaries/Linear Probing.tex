@@ -32,9 +32,10 @@ Delete(x)
 
 	n = n + 1
 	while A[n] is not empty
-		A[n-1] = A[n]
+		tmp = A[n]
+		A[n] = null
+		insert(A[n])
 		n = n + 1
-	A[n-1] = null
 \end{lstlisting}
 \textbf{Running Time}:
 \begin{itemize}
