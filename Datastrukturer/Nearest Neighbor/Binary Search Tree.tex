@@ -14,7 +14,7 @@ Predecessor(v, k)
 	else
 		return v
 
-Successor(k)
+Successor(v, k)
 	if v = null
 		return null
 	if v.key = k
@@ -39,8 +39,10 @@ Delete(x)
 		x.parent.Child(x) = null
 	else if x.left = null and x.right not null
 		x.parent.Child(x) = x.right
+		x.right.parent = x.parent
 	else if x.right = null and x.left not null
 		x.parent.Child(x) = x.left
+		x.left.parent = x.parent
 	else
 		x.key = Successor(x.right).key
 		Delete(Successor(x.right))
