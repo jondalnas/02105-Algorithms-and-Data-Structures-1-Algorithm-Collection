@@ -1,13 +1,13 @@
 Vi kan bruge en heap til at lave en priority queue\\
 \begin{lstlisting}[frame=single, mathescape=true]
 Max()
-	return H[0]
+	return H[1]
 
 ExtractMax()
-	r = H[0]
-	H[0] = H[n]
+	r = H[1]
+	H[1] = H[n]
 	n = n - 1
-	H.BubbleDown(0)
+	H.BubbleDown(1)
 	return r
 
 IncreaseKey(x, k)
