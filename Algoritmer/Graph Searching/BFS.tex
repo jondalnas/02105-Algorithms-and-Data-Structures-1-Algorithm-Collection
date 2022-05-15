@@ -5,7 +5,7 @@ BFS(s)
 	mark s
 	s.d = 0
 	Q.Enqueue(s)
-	while Q.IsEmpty()
+	while not Q.IsEmpty()
 		v = Q.Dequeue()
 		for each unmarked neighbor u
 			mark u
