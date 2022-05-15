@@ -13,9 +13,9 @@ Bipartite(G, s)
 			u.parrent = v
 			Q.Enqueue(u)
 
-	for each neighbor u
-		if (u.d mod 2) = (v.d mod 2)
-			return false
+		for each neighbor u
+			if (u.d mod 2) = (v.d mod 2)
+				return false
 	return true
 \end{lstlisting}
 \textbf{Running time}: O(n + m)
