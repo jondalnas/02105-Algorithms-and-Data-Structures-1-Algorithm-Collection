@@ -7,7 +7,10 @@ Find(i)
 		i = p[i]
 
 	while oi$\neq$p[oi]
-		p[oi] = i
+		tmp = oi
+		oi = p[oi]
+		p[tmp] = i
+
 	return i
 \end{lstlisting}
 \textbf{Running Time}: O(n + m $\alpha$(m, n))
