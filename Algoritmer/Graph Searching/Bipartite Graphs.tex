@@ -2,6 +2,20 @@ En Bipartite Graph er en graf, hvor alle hjørner kan farves enten røde eller b
 \textbf{Pseudokode}:
 \begin{lstlisting}[frame=single, mathescape=true]
 Bipartite(G, s)
-	BFS(s)
+	mark s
+	s.d = 0
+	Q.Enqueue(s)
+	while Q.IsEmpty()
+		v = Q.Dequeue()
+		for each unmarked neighbor u
+			mark u
+			u.d = v.d + 1
+			u.parrent = v
+			Q.Enqueue(u)
+
+	for each neighbor u
+		if (u.d mod 2) = (v.d mod 2)
+			return false
+	return true
 \end{lstlisting}
 \textbf{Running time}: O(n + m)
